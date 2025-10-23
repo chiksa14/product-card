@@ -96,3 +96,11 @@
   font-size: 20px;
   line-height: 24px;
 }
+
+.btn-bg-aquamarine {
+  background-color: aquamarine;
+}
+
+.bg-red {
+  background-color: red;
+}
