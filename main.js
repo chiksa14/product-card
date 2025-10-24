@@ -1,12 +1,14 @@
+// Изменение цвета всех карточек
 const productCards = document.querySelectorAll('.card-container');
 const changeColorAllCardButton = document.querySelector('#btn-change-color-all-card');
 const greenColorHash = '#00FF00';
-const blueColorHash = '#0000FF'
 
 changeColorAllCardButton.addEventListener('click', () => {
   productCards.forEach((card) => card.style.backgroundColor = greenColorHash)
 })
 
+// Изменение цвета первой карточки
+const blueColorHash = '#0000FF';
 const firstProductCard = document.querySelector('.card-container');
 const changeColorFirstCardButton = document.querySelector('#btn-change-color-first-card');
 
@@ -14,6 +16,7 @@ changeColorFirstCardButton.addEventListener('click', () => {
   firstProductCard.style.backgroundColor = blueColorHash;
 })
 
+// Кнопка открытия сайта google.com
 const openGoogleButton = document.querySelector('#btn-open-google');
 
 openGoogleButton.addEventListener('click', openGoogle)
@@ -28,6 +31,7 @@ function openGoogle() {
   }
 }
 
+// Вывод сообщения в консоли
 const outputLogButton = document.querySelector('#btn-output-console-log');
 
 outputLogButton.addEventListener('click', () => outputConsoleLog('ДЗ #4'))
@@ -37,10 +41,10 @@ function outputConsoleLog(message) {
   console.log(message)
 }
 
+// Изменение цвета кнопки
+ const colorChangeButton = document.getElementById('btn-change');
 
- const colorChangeButton = document.getElementById('btn-bg-aquamarine');
-
-    colorChangeButton.addEventListener('click', function () {
+    colorChangeButton.addEventListener('click', function() {
         colorChangeButton.style.backgroundColor = 'red';
     });
 
@@ -53,6 +57,7 @@ function changeColorButton() {
   colorChangeButton.classList.toggle('bg-red');
 }
 
+// Вывод в консоли при наведении на загаловок страницы
 const mainTitle = document.querySelector('.title');
 
 mainTitle.addEventListener('mouseover', () => {
