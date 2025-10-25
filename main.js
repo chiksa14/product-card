@@ -63,3 +63,18 @@ const mainTitle = document.querySelector('.title');
 mainTitle.addEventListener('mouseover', () => {
   console.log(mainTitle.textContent);
 })
+
+// Кнопка купить
+const buttonPay = document.querySelector('.btn-pay');
+
+buttonPay.addEventListener('click', openWindow)
+
+function openWindow() {
+  const answer = confirm('Вы действительно хотите купить?')
+
+  if (answer === true) {
+    window.open('https://pay.com')
+  } else {
+    return; 
+  }
+}

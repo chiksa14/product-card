@@ -104,3 +104,39 @@
 .bg-red {
   background-color: red;
 }
+
+#btn-change-color-first-card {
+  padding: 20px;
+  background-color: turquoise;
+  border-radius: 15px;
+}
+
+#btn-change-color-all-card {
+  background-color: rgb(51, 255, 0);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#btn-open-google {
+  background-color: rgb(255, 0, 217);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#btn-output-console-log {
+  background-color: rgb(221, 255, 0);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#btn-change {
+  background-color: rgb(255, 136, 0);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.btn-pay {
+  border-radius: 65px;
+  padding: 5px;
+  background-color: #008000;
+}
