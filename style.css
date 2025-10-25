@@ -7,7 +7,7 @@
   font-weight: 400;
 }
 
-.all-card-container {
+.card-list-container {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -64,20 +64,15 @@
   line-height: 27px;
 }
 
-.functoin {
+.product-description {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-
-
-.ingr {
+.product-compound {
   padding-left: 15px;
   margin-bottom: 0px;
 }
-
-
-
 
 .product-price {
   padding-top: 25px;
