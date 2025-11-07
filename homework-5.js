@@ -8,47 +8,47 @@ showWeather("Астрахань", 11)
 // Выше/ниже скорости звука
 const SPEED_SOUND = 343;
 
-function soundComparison(speed) {
-  if (speed > SPEED_SOUND){
+function compareSpeed(speed) {
+  if (speed > SPEED_SOUND) {
     console.log('Сверхзвуковая скорость');
   } else {
     console.log('Дозвуковая скорость');
   }
 }
 
-soundComparison(368)
+compareSpeed(368)
 
 // Покупка товара
-const goods = 'Хлеб';
-const goodsPrice = 30;
+const product = 'Хлеб';
+const productPrice = 30;
 
-function currentBudget(budget) {
-  if (budget >= goodsPrice){
-    console.log(`${goods} приобретён за ${goodsPrice} рублей. Спасибо за покупку!`)
-    const ostatok = budget - goodsPrice
-    console.log(`Ваша сдача составляет ${ostatok} рублей`)
-  } else{
-    const notEnough = goodsPrice - budget
+function buyProduct(budget) {
+  if (budget >= productPrice) {
+    console.log(`${product} приобретён за ${productPrice} рублей. Спасибо за покупку!`)
+    const remains = budget - productPrice
+    console.log(`Ваша сдача составляет ${remains} рублей`)
+  } else {
+    const notEnough = productPrice - budget
     console.log(`Вам не хватает ${notEnough} рублей`)
   }
 }
 
-currentBudget(100)
+buyProduct(100)
 
 // функция и переменные по усмотрению
 
-const hoodies = 1500;
-const clothCap = 500;
-const shorts = 800;
+const priceHoodies = 1500;
+const priceClothCap = 500;
+const priceShorts = 800;
 
 function buyClothes(myBudget) {
-  const totalCost = hoodies + clothCap + shorts;
+  const totalCost = priceHoodies + priceClothCap + priceShorts;
   const remainder = myBudget - totalCost;
-  if (myBudget >= totalCost){
-    console.log(`Вы приобрели весь набор, который состоит из Худи(${hoodies} р.), кепки(${clothCap} р.), шорт(${shorts} р.). Ваш остаток ${remainder} рублей`)
-  } else{
-    const notBudget = totalCost - myBudget;
-    console.log(`На вашем счете недостаточно средств. Пополните его на ${notBudget} р.`)
+  if (myBudget >= totalCost) {
+    console.log(`Вы приобрели весь набор, который состоит из Худи(${priceHoodies} р.), кепки(${priceClothCap} р.), шорт(${priceShorts} р.). Ваш остаток ${remainder} рублей`)
+  } else {
+    const difference = totalCost - myBudget;
+    console.log(`На вашем счете недостаточно средств. Пополните его на ${difference} р.`)
   }
 }
 
