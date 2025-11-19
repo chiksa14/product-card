@@ -22,7 +22,7 @@ const carInfo = {
   boxType: "auto"
 }
 
-carInfo.Owner = {user}
+carInfo.owner = [user]
 
 console.log(carInfo)
 
@@ -48,42 +48,49 @@ getPropertyValue(carInfo, "releaseYear")
 let = ['хлеб', 'яйца', 'майонез', 'кетчуп']
 
 //6 example(Создать массив, состоящий из объектов, где объект представляет собой книгу )
-let frames = [
+const frames = [
   {
     name: "Александр",
     position: "Frontend Developer",
-    experience: 2},
+    experience: 2
+  },
   {
     name: "Евгений", 
     position: "Backend Developer", 
-    experience: 5},
+    experience: 5
+  },
   {
     name: "Кирилл", 
     position: "HR-менеджер", 
-    experience: 1},
+    experience: 1
+  },
   {
     name: "Денис", 
     position: "Projet Manager",
-    experience: 3}
+    experience: 3
+  }
 ]
 
 frames.push({
   name: "Артем", 
   position:"TechLead",
-  experience: 8})
+  experience: 8
+})
 
 console.log(frames)
 
 //7 example(массив, состоящих из тех же книг, но относящийся к определенной вселенной )
-let framesNew = [
+const framesNew = [
   {
     name: "Матвей",
     position: "Team Lead ",
-    experience: 7},
+    experience: 7
+  },
   {
     name: "Егор",
     position: "Тестировщик",
-    experience: 5},
+    experience: 5
+  },
   {
     name: "Евгений",
     position: "SMM-специалист",
@@ -91,7 +98,7 @@ let framesNew = [
   }
 ]
 
-let teamComposition  = [...frames, ...framesNew]
+const teamComposition  = [...frames, ...framesNew]
 
 console.log(teamComposition)
 
