@@ -7,7 +7,7 @@
   font-weight: 400;
 }
 
-.card-list-container {
+.all-card-container {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   background-position: 86px -174px;
   width: 1280px;
-  background-image: url(/images/background.png);
+  background-image: url(images/background.png);
   background-size: 790px 697px;
 }
 
