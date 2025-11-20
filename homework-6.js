@@ -22,7 +22,7 @@ const carInfo = {
   boxType: "auto"
 }
 
-carInfo.owner = [user]
+carInfo.owner = user
 
 console.log(carInfo)
 
