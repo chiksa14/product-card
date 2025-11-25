@@ -11,46 +11,50 @@ const specificLine = lines.includes("Зеркало")
 console.log(specificLine)
 
 //4 example(reverse)
-function reversedArrays (numbers, lines) {
-  numbers.reverse(); lines.reverse()
-  console.log(numbers, lines)
+function getReverseArray (array) {
+  array.reverse(); 
+  console.log(array)
 
 }
 
-reversedArrays(numbers, lines)
+getReverseArray(lines)
+getReverseArray(numbers)
 
 //7 example(Вывести в консоль массив комментариев)
-import { commentsSocials } from "./comments.js"
-const emailListining = commentsSocials.filter(comment => comment.email.includes('.com'))
+import { socialsComments } from "./comments.js"
+const emailListining = socialsComments.filter(comment => comment.email.includes('.com'))
 console.log(emailListining)
 
 //8 example(Перебрать массив)
-const checkUserId = commentsSocials.map(comment => ({...comment, postId: comment.id <= 5 ? 2 : 1 }));
+const checkUserId = socialsComments.map(comment => ({...comment, postId: comment.id <= 5 ? 2 : 1 }));
 console.log(checkUserId)
 
 //9 example(Перебрать массив, что бы объекты состояли только из айди и имени)
-const newCommentsSocials = commentsSocials.map(({id, name}) => ({id, name}))
-console.log(newCommentsSocials)
+const newSocialsComments = socialsComments.map(comment => ({
+  id: comment.id, 
+  name: comment.name
+}))
+console.log(newSocialsComments)
 
 //10 example(Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов 
 // - устанавливаем true, меньше - false.)
-const updatedComments = commentsSocials.map(comment => ({...comment, isInvalid: comment.body.length > 180 ? true : false}))
+const updatedComments = socialsComments.map(comment => ({...comment, isInvalid: comment.body.length > 180}))
 console.log(updatedComments)
 
-const commentsWithLength = commentsSocials.map(comment => ({...comment, bodyLength: comment.body.length}))
+const commentsWithLength = socialsComments.map(comment => ({...comment, bodyLength: comment.body.length}))
 console.log(commentsWithLength)
 
 //11 example(метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map)
-const emailArray = commentsSocials.reduce(
+const emailArray = socialsComments.reduce(
   function (acc, comment) {
     return [
-      acc + ', ' + comment.email
+      acc + comment.email
     ]
   }
 )
 console.log(emailArray)
 
-const newEmailArray = commentsSocials.map(comment => comment.email)
+const newEmailArray = socialsComments.map(comment => comment.email)
 console.log(newEmailArray)
 
 //12 example(Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.)

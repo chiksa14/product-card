@@ -1,4 +1,4 @@
-export let commentsSocials =  [
+export let socialsComments =  [
   {
     postId: 1,
     id: 1,
