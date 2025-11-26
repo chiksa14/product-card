@@ -1,3 +1,4 @@
+import { socialsComments } from "./comments.js"
 //2 example(Создать массив чисел от 1 до 10)
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -11,17 +12,16 @@ const specificLine = lines.includes("Зеркало")
 console.log(specificLine)
 
 //4 example(reverse)
-function getReverseArray (array) {
+function reverseArray(array) {
   array.reverse(); 
   console.log(array)
 
 }
 
-getReverseArray(lines)
-getReverseArray(numbers)
+reverseArray(lines)
+reverseArray(numbers)
 
 //7 example(Вывести в консоль массив комментариев)
-import { socialsComments } from "./comments.js"
 const emailListining = socialsComments.filter(comment => comment.email.includes('.com'))
 console.log(emailListining)
 
