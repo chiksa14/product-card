@@ -9,7 +9,7 @@ function outputProductCards(сards) {
   сards.forEach(productCard => {
     const productCardClone = productCardTemplate.content.cloneNode(true);
 
-    productCardClone.querySelector('.card-image').src = productCard.image;
+    productCardClone.querySelector('.card-image').src = `images/${productCard.image}.png`;
     productCardClone.querySelector('.product-category').textContent = productCard.category;
     productCardClone.querySelector('.product-name').textContent = productCard.name;
     productCardClone.querySelector('.product-description').textContent = productCard.description;
