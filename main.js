@@ -67,8 +67,6 @@ mainTitle.addEventListener('mouseover', () => {
 // Кнопка купить
 const buttonPay = document.querySelector('.btn-pay');
 
-buttonPay.addEventListener('click', openWindow)
-
 function openWindow() {
   const answer = confirm('Вы действительно хотите купить?')
 

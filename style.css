@@ -1,13 +1,14 @@
+
 * {
   box-sizing: border-box;
   font-size: 13px;
   line-height: 18px;
-  font-family: Arial, sans-serif;
-  color: #515076;
+  font-family: 'Montserrat';
   font-weight: 400;
 }
 
 .all-card-container {
+  color: #515076;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -100,6 +101,13 @@
   background-color: red;
 }
 
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 #btn-change-color-first-card {
   padding: 20px;
   background-color: turquoise;
@@ -130,8 +138,502 @@
   padding: 20px;
 }
 
+.openRegForm {
+  transition-duration: 0.4s;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.openRegForm:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.authentication {
+  transition-duration: 0.5s;
+  border-radius: 20px;
+}
+
+.authentication:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
 .btn-pay {
   border-radius: 65px;
   padding: 5px;
   background-color: #008000;
+}
+
+.basement {
+  width: 1728;
+  height: 477;
+  counter-reset: #3A3A3A;
+  font-family: 'Montserrat';
+}
+
+.basement {
+  display: flex;
+  justify-content: space-between;
+  width: 1728px;
+  height: 477px;
+  background: #3A3A3A;
+  margin-top: 45px;
+  padding: 85px 85px 28px 85px;
+  position: relative;
+}
+
+.footer-offers-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 24px;
+  color: #FFFFFF;
+  margin: 0
+}
+
+.footer-offers-text {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: 28px 0 45px 0;
+}
+
+.footer-icon-containe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-icon-tg {
+  display: flex;
+  width: 21px;
+  height: 17px;
+  
+}
+
+.footer-icon-vk {
+  display: flex;
+  justify-content: left;
+  width: 24px;
+  height: 14px;
+}
+
+.footer-email-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-email-subscribe-text {
+  font-size: 24px;
+  color: #FFFFFF
+}
+
+.footer-email-form-container {
+  display: flex;
+  border: 5px solid #FFFFFF;
+  border-radius: 10px;
+  background: #FFFFFF;
+  width: 477px;
+  margin-top: 15px;
+  margin-bottom: auto;
+}
+
+.footer-email-input {
+  display: flex;
+  border-width: 0;
+  align-items: center;
+  height: 61px;
+  width: 100%;
+  padding-left: 36px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.footer-email-input {
+  font-size: 17px;
+  color: #000000BF
+}
+.footer-email-input-line {
+  width: 2px;
+  height: 22px;
+  margin: auto;
+  background: #000000;
+}
+
+.footer-email-btn-subscribe {
+  display: flex;
+  border-width: 0;
+  align-items: center;
+  width: 160px;
+  font-size: 18px;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 0 15px 0 21px
+}
+
+.footer-email-bottom-line {
+  width: 70px;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFFFFF;
+}
+
+.footer-email-address-text {
+  display: flex;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 33px;
+}
+
+.footer-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+}
+
+.footer-nav-link-container {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.footer-nav-title {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: 23px;
+}
+
+.product-footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 477px;
+  background: #3A3A3A;
+  margin-top: 45px;
+  padding: 85px 85px 28px 85px;
+  position: relative;
+}
+
+.footer-offers-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-title {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.footer-offers-text {
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: 28px 0 45px 0;
+}
+
+.footer-social-icon-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75px;
+}
+
+.footer-email-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-email-subscribe-text {
+  font-size: 24px;
+  color: #FFFFFF
+}
+
+.footer-email-form-container {
+  display: flex;
+  border: 5px solid #FFFFFF;
+  border-radius: 10px;
+  background: #FFFFFF;
+  width: 477px;
+  margin-top: 15px;
+  margin-bottom: auto;
+}
+
+.footer-email-input {
+  height: 50px;
+  width: 100%;
+  padding-left: 36px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.footer-email-input::placeholder {
+  font-size: 18px;
+  color: #000000BF
+}
+
+.footer-email-input-line {
+  width: 2px;
+  height: 22px;
+  margin: auto;
+  background: #000000;
+}
+
+.footer-email-btn-subscribe {
+  width: 160px;
+  font-size: 18px;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 0 15px 0 21px
+}
+
+.footer-email-bottom-line {
+  width: 70px;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFFFFF;
+}
+
+.footer-email-address-text {
+  display: flex;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 33px;
+}
+
+.footer-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+}
+
+.footer-nav-link-container {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.footer-nav-title {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: 23px;
+}
+
+#regFormContainer {
+  margin-left: 290px;
+  margin-right: 290px;
+  display: none;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+#regFormContainer.open {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#regForm {
+  gap: 2px;
+  height: 600px;
+  border-radius: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(images/bg-reg-form.png);
+  background-size: 720px 1270px;
+}
+
+#regForm label {
+  font-size: 12px;
+  color: white;
+}
+
+#regForm input {
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 10px;
+  color: #000000;
+}
+
+#regForm input::placeholder {
+  padding-left: 5px;
+  font-size: 12px;
+  color: #000000BF
+}
+
+#regForm select {
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 10px;  
+  color: #000000;
+}
+
+.regForm-btn {
+  transition-duration: 0.4s;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.regForm-btn:hover {
+background-color: #a166ff;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-showed {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.modal__content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1001;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-showed .modal__content {
+  transform: translateY(0);
+}
+
+#closeModalBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+#closeModalBtn:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+#closeModalBtn.active {
+  color: #ff4444;
+}
+
+.modal__content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#loginForm input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#loginForm input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+#loginForm input::placeholder {
+  color: #999;
+}
+
+#loginForm button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+#loginForm button[type="submit"]:hover {
+  background-color: #45a049;
 }
