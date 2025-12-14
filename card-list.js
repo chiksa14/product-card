@@ -61,4 +61,4 @@ export const productCards = [
   }
 ]
 
-
+console.log('Загружено')
