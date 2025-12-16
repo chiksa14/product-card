@@ -1,6 +1,5 @@
-class Modal {
+export class Modal {
   constructor(id) {
-    this.id = id;
     this.element = document.getElementById(id);
     this.closeBtn = this.element.querySelector('#closeModalBtn');
     this.init();
@@ -16,9 +15,9 @@ class Modal {
 
   isOpen() {
     if (this.element.classList.contains('modal-showed')) {
-      return console.log('modal window opened');
+      console.log('modal window open');
     } else {
-      console.log('modal window closed')
+      console.log('modal window close');
     }
   }
 
@@ -26,10 +25,10 @@ class Modal {
     if (this.closeBtn) {
       this.closeBtn.addEventListener('click', () => {
         this.close();
+        // this.isOpen();
       });
     }
   }
 }
 
-const modalInstance = new Modal('loginModal');
-modalInstance.isOpen();
+

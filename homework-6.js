@@ -45,7 +45,7 @@ function getPropertyValue(obj, property) {
 getPropertyValue(carInfo, "releaseYear")
 
 //5 example(Создать массив, который содержит названия продуктов (просто строки))
-let products= ['хлеб', 'яйца', 'майонез', 'кетчуп']
+let products = ['хлеб', 'яйца', 'майонез', 'кетчуп']
 
 //6 example(Создать массив, состоящий из объектов, где объект представляет собой книгу )
 const frames = [
