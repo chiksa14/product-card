@@ -15,9 +15,9 @@ export class Modal {
 
   isOpen() {
     if (this.element.classList.contains('modal-showed')) {
-      console.log('modal window open');
+      return console.log(true);
     } else {
-      console.log('modal window close');
+      return console.log(false);
     }
   }
 
@@ -25,7 +25,6 @@ export class Modal {
     if (this.closeBtn) {
       this.closeBtn.addEventListener('click', () => {
         this.close();
-        // this.isOpen();
       });
     }
   }

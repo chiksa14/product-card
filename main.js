@@ -10,17 +10,17 @@ import './homework-9.js';
 import { Form } from './class-js/Form.js';
 import { Modal } from './class-js/Modal.js';
 import { Book } from './class-js/Book.js';
-import { ReleaseYearBook } from './class-js/ReleaseYearBook.js';
-import { BirthdateAuthor } from './class-js/BirthdateAuthor.js';
+import { ElectronicBook } from './class-js/ElectronicBook.js';
+import { Аudiobook } from './class-js/Аudiobook.js';
 
 const poorLiza = new Book('Бедная Лиза', 'Николай Карамзин');
 poorLiza.read();
 
-const eugeneOnegin = new ReleaseYearBook('Евгений Онегин', 'Александр Пушкин', 1830);
-eugeneOnegin.releaseYear();
+const eugeneOnegin = new ElectronicBook('Евгений Онегин', 'Александр Пушкин', 30);
+eugeneOnegin.changeBrightness();
 
-const mirgorod = new BirthdateAuthor('Миргород', 'Николай Гоголь', 1835, 1809);
-mirgorod.birthdateAuthor();
+const mirgorod = new Аudiobook('Миргород', 'Николай Гоголь', 50, 1.25);
+mirgorod.changeSpeed();
 
 const regisForm = new Form('regForm');
 regisForm.init();

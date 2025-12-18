@@ -1,5 +1,5 @@
 export class Form {
-  constructor(id){
+  constructor(id) {
     this.formElement = document.getElementById(id);
     if (this.formElement) {
       console.log(`id:'${id}' найден`)
@@ -22,12 +22,12 @@ export class Form {
     const values = {};
 
     Object.assign(values, Object.fromEntries(formData.entries()));
-    console.log(values);
+    return console.log(values);
   }
 
   isValid() {
     const elements = this.formElement.checkValidity();
-    console.log(`Валидность:${elements}`)
+    return console.log(elements)
   }
 
   reset() {

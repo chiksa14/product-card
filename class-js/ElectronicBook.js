@@ -1,0 +1,16 @@
+import { Book } from "./Book.js";
+
+export class ElectronicBook extends Book {
+  constructor(title, author, brightnessСontrol) {
+    super(title, author)
+    this.brightnessСontrol = brightnessСontrol;
+  }
+
+  read() {
+    console.log(`Автор книги ${this.title}, ${this.author}`);
+  }
+
+  changeBrightness() {
+    console.log(`Вы читаете данную электронную книгу на яркости: ${this.brightnessСontrol}%`);
+  }
+}
