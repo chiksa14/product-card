@@ -1,17 +1,9 @@
-import { ElectronicBook } from "./ElectronicBook.js";
+import { Book } from "./Book.js";
 
-export class Аudiobook extends ElectronicBook {
-  constructor(title, author, brightnessСontrol, readingSpeed) {
-    super(title, author, brightnessСontrol)
+export class Аudiobook extends Book {
+  constructor(title, author, readingSpeed) {
+    super(title, author)
     this.readingSpeed = readingSpeed;
-  }
-
-  read() {
-    console.log(`Автор книги ${this.title}, ${this.author}`);
-  }
-
-  changeBrightness() {
-    console.log(`Вы читаете данную электронную книгу на яркости: ${this.brightnessСontrol}%`);
   }
 
   changeSpeed() {

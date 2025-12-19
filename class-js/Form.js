@@ -19,15 +19,12 @@ export class Form {
   getValues() {
     const formData = new FormData(this.formElement);
 
-    const values = {};
-
-    Object.assign(values, Object.fromEntries(formData.entries()));
-    return console.log(values);
+    return Object.fromEntries(formData.entries());
   }
 
   isValid() {
     const elements = this.formElement.checkValidity();
-    return console.log(elements)
+    return elements;
   }
 
   reset() {

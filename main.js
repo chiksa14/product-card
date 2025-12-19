@@ -19,7 +19,7 @@ poorLiza.read();
 const eugeneOnegin = new ElectronicBook('Евгений Онегин', 'Александр Пушкин', 30);
 eugeneOnegin.changeBrightness();
 
-const mirgorod = new Аudiobook('Миргород', 'Николай Гоголь', 50, 1.25);
+const mirgorod = new Аudiobook('Миргород', 'Николай Гоголь', 1.25);
 mirgorod.changeSpeed();
 
 const regisForm = new Form('regForm');

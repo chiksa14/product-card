@@ -6,10 +6,6 @@ export class ElectronicBook extends Book {
     this.brightnessСontrol = brightnessСontrol;
   }
 
-  read() {
-    console.log(`Автор книги ${this.title}, ${this.author}`);
-  }
-
   changeBrightness() {
     console.log(`Вы читаете данную электронную книгу на яркости: ${this.brightnessСontrol}%`);
   }

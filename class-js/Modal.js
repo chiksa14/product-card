@@ -15,9 +15,9 @@ export class Modal {
 
   isOpen() {
     if (this.element.classList.contains('modal-showed')) {
-      return console.log(true);
+      return true;
     } else {
-      return console.log(false);
+      return false;
     }
   }
 
