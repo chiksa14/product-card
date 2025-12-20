@@ -23,8 +23,7 @@ export class Form {
   }
 
   isValid() {
-    const elements = this.formElement.checkValidity();
-    return elements;
+    return this.formElement.checkValidity();
   }
 
   reset() {
