@@ -14,11 +14,7 @@ export class Modal {
   }
 
   isOpen() {
-    if (this.element.classList.contains('modal-showed')) {
-      return this.element.classList.contains('modal-showed');
-    } else {
-      return this.element.classList.contains('modal-showed');
-    }
+    return this.element.classList.contains('modal-showed');
   }
 
   init() {
