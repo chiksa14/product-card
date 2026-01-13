@@ -108,3 +108,4 @@ overlay.addEventListener('click', closeModal);
 formLogin.addEventListener('submit', handleAuthentication);
 
 //level 3 example 10(начинается с 97 по 104 строчку)
+

@@ -1,78 +1,30 @@
-// Изменение цвета всех карточек
-const productCards = document.querySelectorAll('.card-container');
-const changeColorAllCardButton = document.querySelector('#btn-change-color-all-card');
-const greenColorHash = '#00FF00';
+//Example 2 (работа с импортами)
 
-changeColorAllCardButton.addEventListener('click', () => {
-  productCards.forEach((card) => card.style.backgroundColor = greenColorHash)
-})
+import './card-list.js';
+import './comments.js';
+import './homework-5.js';
+import './homework-6.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import { Form } from './class-js/Form.js';
+import { Modal } from './class-js/Modal.js';
+import { Book } from './class-js/Book.js';
+import { ElectronicBook } from './class-js/ElectronicBook.js';
+import { Аudiobook } from './class-js/Аudiobook.js';
 
-// Изменение цвета первой карточки
-const blueColorHash = '#0000FF';
-const firstProductCard = document.querySelector('.card-container');
-const changeColorFirstCardButton = document.querySelector('#btn-change-color-first-card');
+const poorLiza = new Book('Бедная Лиза', 'Николай Карамзин');
+poorLiza.read();
 
-changeColorFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = blueColorHash;
-})
+const eugeneOnegin = new ElectronicBook('Евгений Онегин', 'Александр Пушкин', 30);
+eugeneOnegin.changeBrightness();
 
-// Кнопка открытия сайта google.com
-const openGoogleButton = document.querySelector('#btn-open-google');
+const mirgorod = new Аudiobook('Миргород', 'Николай Гоголь', 1.25);
+mirgorod.changeSpeed();
 
-openGoogleButton.addEventListener('click', openGoogle)
+const regisForm = new Form('regForm');
+regisForm.init();
 
-function openGoogle() {
-  const answer = confirm('Вы действительно хотите открыть Google?')
-
-  if (answer === true) {
-    window.open('https://google.com')
-  } else {
-    return; 
-  }
-}
-
-// Вывод сообщения в консоли
-const outputLogButton = document.querySelector('#btn-output-console-log');
-
-outputLogButton.addEventListener('click', () => outputConsoleLog('ДЗ #4'))
-
-function outputConsoleLog(message) {
-  alert(message)
-  console.log(message)
-}
-
-// Изменение цвета кнопки
- const colorChangeButton = document.getElementById('btn-change');
-
-    colorChangeButton.addEventListener('click', function() {
-        colorChangeButton.style.backgroundColor = 'red';
-    });
-
-
-colorChangeButton.addEventListener('click', () => {
-  changeColorButton()
-})
-
-function changeColorButton() {
-  colorChangeButton.classList.toggle('bg-red');
-}
-
-// Вывод в консоли при наведении на загаловок страницы
-const mainTitle = document.querySelector('.title');
-
-mainTitle.addEventListener('mouseover', () => {
-  console.log(mainTitle.textContent);
-})
-
-// Кнопка купить
-const buttonPay = document.querySelector('.btn-pay');
-
-function openWindow() {
-  const answer = confirm('Вы действительно хотите купить?')
-
-  if (answer === true) {
-    window.open('https://pay.com')
-  } else {
-    return; 
-  }
-}
+const modalInstance = new Modal('loginModal');
+modalInstance.init();
+modalInstance.isOpen();
