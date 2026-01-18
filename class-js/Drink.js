@@ -1,10 +1,10 @@
 export class Drink {
-  #temp
-  constructor(name, size, price, temp) {
+  #temperature
+  constructor(name, size, price, temperature) {
     this.name = name;
     this.size = size;
     this.price = price;
-    this.#temp = temp;
+    this.#temperature = temperature;
   };
 
   getInfoDrink() {
@@ -12,12 +12,12 @@ export class Drink {
   };
 
   getTempDrink() {
-    return ((this.#temp).toString());
-    console.log(this.#temp);
+    return ((this.#temperature).toString());
+    console.log(this.#temperature);
   };
 
   setTempDrink(temp) {
-    this.#temp = temp;
+    this.#temperature = temperature;
   };
 
   cookDrink() {

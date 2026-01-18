@@ -20,25 +20,24 @@ export class Cafe{
 
   showMenu() {
     console.log('Меню:')
-     this.menu.forEach(drink => {
+    this.menu.forEach(drink => {
       console.log(`${drink.name} - ${drink.price} руб.`);
     });
-  }
+  };
 
   buyDrink(drinkName) {
   if (!drinkName || typeof drinkName !== 'string') {
     return;
-  }
+  };
   
   const searchName = drinkName.toLowerCase();
-  const drink = this.menu.find(item => 
-    item?.name?.toLowerCase()?.includes(searchName)
+  const drink = this.menu.find(item => item?.name?.toLowerCase()?.includes(searchName)
   );
   
   if (!drink) {
     console.log(`Напитка "${drinkName}" нет в меню`);
     return;
-  }
+  };
   
   drink.cookDrink();
   drink.serveDrink();

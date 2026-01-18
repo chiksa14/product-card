@@ -1,9 +1,12 @@
 import { Drink } from "./Drink.js";
 
 export class Milkshake extends Drink {
-  #temp
-  constructor(name, size, price, temp, tasteSyrup) {
-    super(name, size, price, temp)
+  constructor(name, size, price, temperature, tasteSyrup) {
+    super(name, size, price, temperature)
     this.tasteSyrup = tasteSyrup;
+  };
+
+  selectSyrup() {
+    console.log(`Вы выбрали ${this.tasteSyrup} сироп`);
   }
 }

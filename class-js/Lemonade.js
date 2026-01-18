@@ -1,9 +1,12 @@
 import { Drink } from "./Drink.js";
 
 export class Lemonade extends Drink {
-  #temp
-  constructor(name, size, price, temp, typeСarbonated) {
-    super(name, size, price, temp)
+  constructor(name, size, price, temperature, typeСarbonated) {
+    super(name, size, price, temperature)
     this.typeСarbonated = typeСarbonated;
+  };
+
+  selectTypeGas() {
+    console.log(`Вы выбрали ${this.typeСarbonated} лимонад`);
   }
 }

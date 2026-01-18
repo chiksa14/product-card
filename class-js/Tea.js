@@ -1,9 +1,12 @@
 import { Drink } from "./Drink.js";
 
 export class Tea extends Drink {
-  #temp
-  constructor(name, size, price, temp, colorTea) {
-    super(name, size, price, temp)
+  constructor(name, size, price, temperature, colorTea) {
+    super(name, size, price, temperature)
     this.colorTea = colorTea;
+  }
+
+  selectColorTea() {
+    console.log(`Цвет заказанного чая: ${this.colorTea}`);
   }
 }

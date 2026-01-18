@@ -39,3 +39,7 @@ cafe.getInfoCafe();
 cafe.showMenu();
 cafe.buyDrink();
 cafe.buyDrink('чай')
+
+const tea = new Tea('Чай', 'маленький', 99, 100, 'черный')
+tea.selectColorTea();
+tea.cookDrink
