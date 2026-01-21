@@ -8,7 +8,7 @@ export class Drink {
   };
 
   getInfoDrink() {
-    console.log(`Напиток: ${this.name} размера: ${this.size}, стоит ${this.price} р.`);
+    console.log(`Напиток: ${ this.name } размера: ${ this.size }, стоит ${ this.price } р.`);
   };
 
   getTempDrink() {
@@ -21,7 +21,7 @@ export class Drink {
   };
 
   cookDrink() {
-    console.log(`Идет процесс готовки напитка: ${this.name}.`);
+    console.log(`Идет процесс готовки напитка: ${ this.name }.`);
   };
 
   serveDrink() {

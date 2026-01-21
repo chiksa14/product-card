@@ -15,13 +15,13 @@ export class Cafe {
   }
 
   getInfoCafe() {
-    console.log(`Добро пожаловать в лучшую кофейню "${this.nameCafe}" в г.${this.geoCafe}. Меню состоит из ${this.menu.length} напитков(все в наличии)`)
+    console.log(`Добро пожаловать в лучшую кофейню "${ this.nameCafe }" в г.${ this.geoCafe }. Меню состоит из ${ this.menu.length } напитков(все в наличии)`)
   };
 
   showMenu() {
     console.log('Меню:')
     this.menu.forEach(drink => {
-      console.log(`${drink.name} - ${drink.price} руб.`);
+      console.log(`${ drink.name } - ${ drink.price } руб.`);
     });
   };
 
@@ -35,7 +35,7 @@ export class Cafe {
   );
   
   if (!drink) {
-    console.log(`Напитка "${drinkName}" нет в меню`);
+    console.log(`Напитка "${ drinkName }" нет в меню`);
     return;
   };
   
