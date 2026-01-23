@@ -1,4 +1,5 @@
 export class Modal {
+
   constructor(id) {
     this.element = document.getElementById(id);
     this.closeBtn = this.element.querySelector('#closeModalBtn');
@@ -24,6 +25,7 @@ export class Modal {
       });
     }
   }
+  
 }
 
 

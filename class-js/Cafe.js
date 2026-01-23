@@ -4,6 +4,7 @@ import { Tea } from "./Tea.js";
 import { Milkshake } from "./Milkshake.js";
 
 export class Cafe {
+
   constructor(nameCafe, geoCafe) {
     this.nameCafe = nameCafe;
     this.geoCafe = geoCafe;
@@ -42,5 +43,6 @@ export class Cafe {
   drink.cookDrink();
   drink.serveDrink();
   console.log('Заказ выполнен');
-}
+  }
+  
 }

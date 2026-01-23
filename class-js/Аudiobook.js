@@ -1,6 +1,7 @@
 import { Book } from "./Book.js";
 
 export class Аudiobook extends Book {
+
   constructor(title, author, readingSpeed) {
     super(title, author)
     this.readingSpeed = readingSpeed;
@@ -9,4 +10,5 @@ export class Аudiobook extends Book {
   changeSpeed() {
     console.log(`Вы изменили скорость чтения на ${this.readingSpeed}x`);
   }
+  
 }
