@@ -13,7 +13,7 @@ export class Drink {
   };
 
   getTempDrink() {
-    return ((this.#temperature).toString());
+    return this.#temperature.toString();
     console.log(this.#temperature);
   };
 
