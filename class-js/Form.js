@@ -1,4 +1,5 @@
 export class Form {
+
   constructor(id) {
     this.formElement = document.getElementById(id);
     if (this.formElement) {
@@ -29,4 +30,5 @@ export class Form {
   reset() {
     this.formElement.reset();
   }
+  
 }
