@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('Gemini_Generated_Image_pwhz4cpwhz4cpwhz.png');
+  background-image: url('backgroundAsync.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -52,7 +52,7 @@
   font-size: 14px;
 }
 
-.delete-btn {
+.js-delete-btn {
   border: none;
   transition-duration: 0.4s;
   padding: 20px;
@@ -61,7 +61,7 @@
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.delete-btn:hover {
+.js-delete-btn:hover {
   background-color: #ffb300;
   color: white;
 }

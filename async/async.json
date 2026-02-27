@@ -6,15 +6,13 @@
     "email": "prokhorArtem@gmail.com",
     "age": 20
   },
-
- {
+  {
   "id": 2,
   "name": "Кирилл",
   "surname": "Иванов",
   "email": "ivanovkirill@gmail.com",
   "age": 19
   },
-
   {
   "id": 3,
   "name": "Дмитрий",
@@ -22,7 +20,6 @@
   "email": "nagievdima@gmail.com",
   "age": 30
   },
-
   {
   "id": 4,
   "name": "Алексей",
@@ -30,7 +27,6 @@
   "email": "tihomirovalex@gmail.com",
   "age": 25
   },
-
   {
   "id": 5,
   "name": "Павел",
