@@ -1,6 +1,6 @@
-const textLoad = document.getElementById('text-load');
-const cardCont = document.getElementById('cards-container');
-const deleteAllBtn = document.getElementById('delete-all-btn');
+const statusLoad = document.getElementById('status-load');
+const cardsContainer = document.getElementById('cards-container');
+const deleteAllCardsBtn = document.getElementById('delete-all-cards-btn');
 
 function getUsersFromStorage() {
   const data = localStorage.getItem('users');
@@ -12,11 +12,11 @@ function saveUsersToStorage(users) {
 }
 
 function renderUsers() {
-  cardCont.innerHTML = '';
+  cardsContainer.innerHTML = '';
   const users = getUsersFromStorage();
   users.forEach(user => {
     const userCard = createUserCard(user); 
-    cardCont.appendChild(userCard);
+    cardsContainer.appendChild(userCard);
   })
 };
 
@@ -41,24 +41,48 @@ function createUserCard(user) {
   return cloneTemplate;
 }
 
-async function loadInitialData() {
-  function showBtnDelete() {
-  const showBtnDelete = document.getElementById('delete-all-btn');
-  showBtnDelete.classList.add('show')
+function showBtnDelete() {
+  deleteAllCardsBtn.classList.add('show')
 };
-  try {
-    const response = await fetch('async.json');
-    const initialUsers = await response.json();
 
-    saveUsersToStorage(initialUsers);
+function hideBtnDelete() {
+  deleteAllCardsBtn.classList.remove('show')
+};
 
-    if (textLoad) textLoad.remove();
+async function loadInitialData() {
+  const existingUsers = getUsersFromStorage();
 
+  if (existingUsers.length > 0) {
+    if (statusLoad) statusLoad.remove();
     renderUsers();
-  } catch (error) {
-    console.error("Не удалось загрузить данные:", error);
+    showBtnDelete();
+  } else {
+    try {
+      const response = await fetch('async.json');
+      const result = await response.json();
+
+      saveUsersToStorage(result.users);
+
+      if (statusLoad) statusLoad.remove();
+      renderUsers();
+      showBtnDelete();
+    } catch (error) {
+      console.error("Не удалось загрузить данные:", error);
+    }
   }
-  showBtnDelete();
 }
+
+function handleDeleteAllCards() {
+  const isConfirmed = confirm('Вы уверены, что хотите удалить всех пользователей?');
+
+  if (isConfirmed) {
+    saveUsersToStorage([]);
+    renderUsers();
+    hideBtnDelete();
+    console.log('Все карточки удалены');
+  }
+}
+
+deleteAllCardsBtn.addEventListener('click', handleDeleteAllCards);
 
 loadInitialData();

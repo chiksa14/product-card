@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('backgroundAsync.png');
+  background-image: url('background-storage-cards.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -66,12 +66,12 @@
   color: white;
 }
 
-.delete-all-btn {
+.delete-all-cards-btn {
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.delete-all-btn.show {
+.delete-all-cards-btn.show {
   border: none;
   opacity: 1;
   padding: 20px;
@@ -80,7 +80,7 @@
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.delete-all-btn.show:hover {
+.delete-all-cards-btn.show:hover {
   background-color: #0ab6e5;
   color: white;
 }
