@@ -53,6 +53,7 @@
 }
 
 .js-delete-btn {
+  cursor: pointer;
   border: none;
   transition-duration: 0.4s;
   padding: 20px;
@@ -66,22 +67,35 @@
   color: white;
 }
 
-.delete-all-cards-btn {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.delete-all-cards-btn.show {
+.btn-delete-cards {
   border: none;
   opacity: 1;
   padding: 20px;
   border-radius: 15px;
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.delete-all-cards-btn.show:hover {
+.dtn-delete-cards:hover {
   background-color: #0ab6e5;
   color: white;
 }
 
+.btn-load-cards {
+  background-color: #f0f0f0;
+  border: none;
+  opacity: 1;
+  padding: 20px;
+  border-radius: 15px;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-load-cards:hover {
+  background-color: #0ab6e5;
+  color: white;
+}

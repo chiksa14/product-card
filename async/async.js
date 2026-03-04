@@ -1,6 +1,6 @@
 const statusLoad = document.getElementById('status-load');
 const cardsContainer = document.getElementById('cards-container');
-const deleteAllCardsBtn = document.getElementById('delete-all-cards-btn');
+const mainActionBtn = document.getElementById('main-action-btn');
 
 function getUsersFromStorage() {
   const data = localStorage.getItem('users');
@@ -18,6 +18,7 @@ function renderUsers() {
     const userCard = createUserCard(user); 
     cardsContainer.appendChild(userCard);
   })
+  updateMainButton()
 };
 
 function createUserCard(user) {
@@ -41,21 +42,14 @@ function createUserCard(user) {
   return cloneTemplate;
 }
 
-function showBtnDelete() {
-  deleteAllCardsBtn.classList.add('show')
-};
-
-function hideBtnDelete() {
-  deleteAllCardsBtn.classList.remove('show')
-};
-
 async function loadInitialData() {
   const existingUsers = getUsersFromStorage();
-
   if (existingUsers.length > 0) {
-    if (statusLoad) statusLoad.remove();
-    renderUsers();
-    showBtnDelete();
+    if (statusLoad) {
+      statusLoad.remove();
+      renderUsers();
+      updateMainButton();
+    }
   } else {
     try {
       const response = await fetch('async.json');
@@ -63,9 +57,11 @@ async function loadInitialData() {
 
       saveUsersToStorage(result.users);
 
-      if (statusLoad) statusLoad.remove();
-      renderUsers();
-      showBtnDelete();
+      if (statusLoad) {
+        statusLoad.remove();
+        renderUsers();
+        updateMainButton();
+      }
     } catch (error) {
       console.error("Не удалось загрузить данные:", error);
     }
@@ -78,11 +74,44 @@ function handleDeleteAllCards() {
   if (isConfirmed) {
     saveUsersToStorage([]);
     renderUsers();
-    hideBtnDelete();
     console.log('Все карточки удалены');
   }
 }
 
-deleteAllCardsBtn.addEventListener('click', handleDeleteAllCards);
+async function handleLoadInitialCards() {
+  try {
+    const response = await fetch('async.json');
+    const result = await response.json();
+
+    saveUsersToStorage(result.users);
+
+    renderUsers();
+  } catch (error) {
+    console.error("Не удалось загрузить данные:", error);
+  }
+}
+
+function updateMainButton() {
+  const users = getUsersFromStorage();
+
+  if (users.length === 0) {
+    mainActionBtn.textContent = 'Загрузить карточки';
+    mainActionBtn.classList.add('btn-load-cards');
+    mainActionBtn.classList.remove('btn-delete-cards');
+  } else {
+    mainActionBtn.textContent = 'Удалить карточки';
+    mainActionBtn.classList.remove('btn-load-cards');
+    mainActionBtn.classList.add('btn-delete-cards');
+  }
+}
+
+mainActionBtn.onclick = () => {
+  const users = getUsersFromStorage();
+  if (users.length > 0) {
+    handleDeleteAllCards();
+  } else {
+    handleLoadInitialCards();
+  }
+};
 
 loadInitialData();
