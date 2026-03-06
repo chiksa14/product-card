@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Данные пользователей</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+<body>
+  <div class="container">
+    <span>
+      <h2 id="status-load">Данные загружаются...</h2>
+    </span>
+    <template id="user-card-template">
+      <div class="user-card">
+        <h3 class="js-user-name"></h3> 
+        <h3 class="js-user-surname"></h3>
+        <p class="js-user-age"></p>
+        <button class="js-delete-btn">Удалить</button>
+      </div>
+    </template>
+      <button id="main-action-btn">Загрузить карточки</button>
+    <div id="cards-container"></div>
+  </div>
+  <script src="async.js"></script>
+</body>
+</html>
